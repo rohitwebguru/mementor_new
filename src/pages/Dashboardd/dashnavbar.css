@@ -1,0 +1,117 @@
+/* --- --- --- Imports fonts being used --- --- ---*/
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("./assets/fonts/minecraft-font/MinecraftBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "termin-font";
+  src: url("./assets/fonts/termin-font/termin-font.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Minecraft-Reg";
+  src: url("./assets/fonts/minecraft-font/MinecraftRegular.otf");
+  font-weight: 700;
+}
+
+/* --- --- --- Builds Nav Bar syling --- --- ---*/
+
+.dashboard-navbar {
+  width: 250px; /* Width of the sidebar */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(0, 0, 0, 0.89); */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0;
+  z-index: 5;
+
+}
+
+/* --- --- --- adjusts nav bar's logo styling --- --- ---*/
+
+.dashboard-logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+}
+
+.dashboard-logo-container {
+ align-items: flex-start;
+
+}
+
+.site-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid red; /* Add red line here */
+  padding-bottom: 10px; /* Add padding to separate the line from the content below */
+}
+
+/* --- --- --- Adjusts the Nav Bar element's alignment and stlying --- --- ---*/
+
+.dashboard-nav-links {
+  list-style-type: none;
+  margin: 25px 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+margin-left: 50px;
+}
+
+.dashboard-nav-item {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: left;
+  font-family: "Minecraft-Reg";
+}
+.dashboard-nav-item-2 {
+  margin-bottom: 30px;
+  margin-top: 200px;
+}
+
+/* --- --- --- Creates a green circle before RPC Triton on Nav bar --- --- ---*/
+
+.green-circle::before {
+  content: "";
+  display: inline-block;
+  width: 8px; /* Adjust size as needed */
+  height: 8px; /* Adjust size as needed */
+  background-color: green;
+  border-radius: 50%; /* To make it a circle */
+  margin-right: 8px; /* Adjust spacing between circle and text */
+  box-shadow: 0 0 6px 3px rgba(0, 255, 0, 0.5); /* Glow effect */
+}
+
+/* --- --- --- Adds Nav bar text item hover fade effect --- --- ---*/
+.dashboard-nav-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.dashboard-nav-link:hover {
+  color: grey;
+}
+
+/* --- --- --- Styling for nav bars bottom social icon items --- --- ---*/
+
+.dashboard-social-icons {
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Optional: Add space between items */
+  margin-top: auto; /* Keeps this style from your previous CSS */
+}
+
+.dashboard-social-icons img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin: 0px;
+}

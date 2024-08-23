@@ -1,0 +1,797 @@
+/* --- --- --- Imports fonts being used --- --- ---*/
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("./assets/fonts/minecraft-font/MinecraftBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "termin-font";
+  src: url("./assets/fonts/termin-font/termin-font.ttf");
+  font-weight: 700;
+}
+
+/* Dashboard.css */
+
+.dashboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index:0;
+  }
+
+  .dashboard-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 85% !important;
+    /* margin: 319px auto !important; */
+    z-index: 1;
+  }
+}
+
+/* --- --- --- Controls top horizontal Nav bar text --- --- ---*/
+.dashboard-header {
+  font-family: "Termin-font";
+  font-size: 40px;
+}
+/* --- --- --- Controls background video styling --- --- ---*/
+.dashboard-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.dashboard-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  z-index: 1;
+  background: black;
+}
+
+/* --- --- --- Controls text in box 1 --- --- ---*/
+
+.flex-1 {
+  font-family: "termin-font";
+}
+
+.text-orange {
+  font-family: "Minecraft-Reg";
+  font-size: large;
+}
+
+/* --- --- --- creates transparent text used for styling transitions --- --- ---*/
+
+.transparent-text {
+  color: rgba(255, 255, 255, 0);
+}
+
+/* --- --- --- Controls bottom dashboard box --- --- ---*/
+
+.dashboard-box {
+  /*background: linear-gradient(to bottom, rgb(146, 11, 7), rgb(0, 0, 0)); */
+  background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0));
+  transform: none;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border: 2px solid black; /* Example border */
+  opacity: 0.75;
+  margin-bottom: 25px;
+  position: relative;
+  box-shadow: 0 0 6px 3px rgba(252, 1, 1, 0.5); /* Glow effect */
+}
+
+/* @media(max-width:768px){
+  .dashboard-box{
+    margin: 720px 0px 0px 0px;
+  }
+} */
+
+/* --- --- --- Controls top dashboard box --- --- ---*/
+
+.new-dashboard-box {
+  /*background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0)); */
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 10px;
+  padding: 20px;
+  /* width: 100vw;
+  height: 5vw; */
+  width: 25vw;
+  margin-bottom: 800px; /* Adjust margin as needed */
+  margin-top: -25px;
+  border: 2px solid transparent; /* Example border */
+  min-width: 100vw;
+  opacity: 0.75;
+  position: fixed;
+}
+
+/* --- --- --- Controls top dashboard box texts --- --- ---*/
+
+.newbox-text {
+  /*padding-left: 45vw;*/
+  font-family: "Termin-font";
+  font-size: 20px;
+  text-align: center;
+  z-index: 15;
+}
+
+.newbox-text-p {
+  /*padding-left: 25vw;*/
+  font-family: "termin-font";
+  font-size: 20px;
+}
+
+.wallet-box {
+  /*background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0)); */
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 10px;
+  /* padding: 20px; */
+  /* width: 100vw;
+  height: 5vw; */
+  width: 30vw;
+  margin-bottom: 800px; /* Adjust margin as needed */
+  margin-top: -50px;
+  margin-left: 90vw;
+  border: 2px solid transparent, 0, 0; /* Example border */
+
+  opacity: 0.75;
+  position: fixed;
+  display: flex;
+  align-items: right;
+}
+
+.wallet-text {
+  margin-right: 5vw;
+}
+
+.wallet-icon {
+  /*background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0)); */
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 10px;
+  padding: 20px;
+  /* width: 100vw;
+  height: 5vw; */
+  width: 25vw;
+  margin-bottom: 800px; /* Adjust margin as needed */
+  margin-top: -25px;
+  margin-left: 79vw;
+  border: 2px solid transparent; /* Example border */
+  max-width: 8vw;
+  max-height: 3vw;
+  opacity: 0.75;
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.green-bar {
+  background-color: white;
+  height: 60px; /* Adjust the height as needed */
+  width: 100%; /* Full width of the page */
+  display: flex; /* Flexbox for positioning elements */
+  justify-content: space-between; /* Space items evenly along the main axis */
+  align-items: center; /* Center items vertically */
+  padding: 0 20px; /* Padding inside the navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for depth */
+  z-index: 100;
+}
+
+.coin-grid {
+  display: flex; /* Use flexbox to create a row layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+/* --- --- --- Controls bottom dashboard box texts and stlying --- --- ---*/
+
+.g-col-4-header {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 20px;
+  color: rgb(156 163 175);
+  font-family: "termin-font";
+}
+
+.g-col-4 {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  color: white;
+  font-family: "Minecraft-Reg";
+}
+.g-col-4-header {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 20px;
+  color: rgb(156 163 175);
+  font-family: "Minecraft";
+}
+
+.g-col-4 {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  color: white;
+  font-family: "Minecraft-Reg";
+}
+
+/* Crypto swap css */
+
+.tb-switch-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 50%; /* Round border for circular shape */
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: transparent; /* Transparent background */
+  margin-left: 50%;
+}
+
+.tb-switch-vertical svg {
+  fill: #ffffff; /* Change image color to white */
+  width: 70%; /* Adjust icon size */
+  height: auto;
+}
+
+.wallet-header-text {
+  text-align: center; /* Adjust width as needed */
+  align-items: center;
+  font-size: medium;
+  font-family: "termin-font";
+}
+
+.crypto-wallet-section-text {
+  font-family: "termin-font";
+  align-items: center;
+  font-size: small;
+  text-align: center;
+}
+
+.crypto-wallet-box {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section {
+  background-color: #5a0b04;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px; /* Adjust spacing between sections */
+  margin-top: 10px; /* Adjust spacing between sections */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-section {
+  text-align: center; /* Center the button horizontally */
+}
+
+.connect-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5a0b04;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  width: 80%;
+  font-family: "termin-font";
+}
+
+.connect-button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* --- --- --- Backup Transparent text when first bugs - used as alt className --- --- ---*/
+.transparent1 {
+  color: transparent;
+}
+
+.nav-img {
+  width: 100%;
+  height: 21px;
+  /* background-color: yellow; */
+  object-fit: contain;
+}
+
+.overlay-box {
+  background: linear-gradient(135deg, #000, red);
+  border: 2px solid red;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff0000b3;
+  overflow: hidden;
+  padding: 10px;
+  top: 40%;
+  z-index: 1;
+}
+
+.overlay-box,
+.video-container video {
+  left: 44%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.btn-wrapper button {
+  background-color: initial;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.overlay-box {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  background: linear-gradient(135deg, black, red);
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+  border: solid 2px red;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+}
+
+
+.connect-overlay-box {
+  transform: translate(0%, 0%);
+  background: linear-gradient(135deg, black, red);
+  /* padding: 10px; */
+  border-radius: 80px;
+  z-index: 1;
+  overflow: hidden;
+  border: solid 2px red;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+  padding: 0;
+}
+
+.connect-overlay-box .lava {
+  position: absolute;
+  top: -103px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #880808; /* Lava color */
+  box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: 0.6s;
+}
+
+.header-connect-button .lava{
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #880808; /* Lava color */
+  box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: 0.6s;
+
+}
+
+.connect-overlay-box:hover .lava {
+  top: -223px;
+}
+
+.connect-overlay-box .lava::after,
+.connect-overlay-box .lava::before {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  transform: translate(0%, 0%);
+}
+
+.connect-overlay-box .lava::after {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  box-shadow: 0 0 10px 5px #880808, inset 0 0 5px #880808;
+  animation: animate 5s linear infinite;
+  opacity: 0.8;
+}
+
+.connect-overlay-box .lava::before {
+  border-radius: 40%;
+  box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+    inset 0 0 5px rgba(26, 26, 26, 0.5);
+  background: black;
+
+  animation: animate 7s linear infinite;
+}
+.connect-overlay-box-border {
+  border-radius: 10px;
+  z-index: 777;
+}
+
+.overlay-box .lava {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #880808; /* Lava color */
+  box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: 0.6s;
+}
+
+.overlay-box:hover .lava {
+  top: -120px;
+}
+
+.overlay-box .lava::after,
+.overlay-box .lava::before {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -75%);
+}
+
+.overlay-box .lava::after {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  box-shadow: 0 0 10px 5px #880808, inset 0 0 5px #880808;
+  animation: animate 5s linear infinite;
+  opacity: 0.8;
+}
+
+.overlay-box .lava::before {
+  border-radius: 40%;
+  box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+    inset 0 0 5px rgba(26, 26, 26, 0.5);
+  background: black;
+
+  animation: animate 7s linear infinite;
+}
+
+.mobile-menu {
+  padding: 5px 0px;
+}
+
+.line11 {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  opacity: 0.65;
+  background-size: 100px 100px;
+  animation: noise 240ms infinite;
+  background-image: url("http://api.thumbr.it/whitenoise-300x300.png?background=0a2406ff&noise=142238&density=85&opacity=100");
+}
+
+@keyframes noise {
+  0% {
+    background-image: url("http://api.thumbr.it/whitenoise-200x200.png?background=0a2406ff&noise=142238&density=85&opacity=100");
+  }
+  33% {
+    background-image: url("http://api.thumbr.it/whitenoise-210x200.png?background=0a2406ff&noise=182235&density=85&opacity=100");
+  }
+  66% {
+    background-image: url("http://api.thumbr.it/whitenoise-200x190.png?background=0a2406ff&noise=142248&density=85&opacity=100");
+  }
+  100% {
+    background-image: url("http://api.thumbr.it/whitenoise-300x300.png?background=0a2406ff&noise=142238&density=85&opacity=100");
+  }
+}
+
+.marquee-container {
+  position: relative;
+  width: 55%;
+  margin-top: -55px;
+  margin-bottom: 140px;
+}
+.marquee {
+  font-family: sans-serif, "Press Start 2P";
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+  background: #7b0011;
+  padding: 0.2em 0;
+  color: #ff4444;
+  box-shadow: 2px 2px 10px #7b0011;
+  overflow: hidden;
+  position: relative;
+  animation: text-line-glow 2s linear infinite;
+}
+@keyframes text-line-glow {
+  0% {
+    text-shadow: 0px 0px 0px #ff4444;
+  }
+  50% {
+    text-shadow: 0px 0px 4px #ff4444;
+  }
+}
+.marquee:before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: repeating-linear-gradient(
+      0deg,
+      #7b001100,
+      #7b001100 1px,
+      #040a2444 1px,
+      #040a2444 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #7b001100,
+      #7b001100 2px,
+      #040a2444 2px,
+      #040a2444 3px
+    );
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.marquee:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  animation: line-glow 3.5s linear infinite;
+  animation-timing-function: steps(50);
+}
+@keyframes line-glow {
+  0% {
+    right: -2%;
+    background-color: #ff4444;
+    box-shadow: 0 0 20px #ffd2fe00;
+  }
+  50% {
+    right: 102%;
+    background-color: #ff4444;
+    box-shadow: 0 0 30px #ffd2feff;
+  }
+}
+.marquee-container:before,
+.marquee-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to right, #040a24, transparent);
+  z-index: 2;
+}
+.marquee-container:after {
+  right: 0;
+  background: linear-gradient(to left, #040a24, transparent);
+}
+
+.dashboard-wrapper {
+  position: relative;
+  padding: 30px 40px;
+  max-width: 780px;
+  margin: 0 auto;
+  min-height: 70vh;
+  font-family: "Space Mono", monospace;
+  font-family: "Share Tech Mono", monospace;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0.5em;
+  color: rgb(192, 91, 91);
+  background-color: rgb(18, 27, 20);
+  background-image: linear-gradient(transparent 50%, rgba(10, 15, 8, 0.1) 50%),
+    radial-gradient(transparent 65%, rgba(2, 10, 1, 0.6) 100%);
+  background-size: 15px, 100%;
+}
+
+@media (max-width: 1440px) {
+  .dashboard-wrapper {
+    margin: 86px 0 0 0;
+  }
+}
+
+.dashboard-wrapper p {
+  line-height: 32px;
+}
+
+.dashboard-wrapper:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  width: 100vw;
+  height: 120px;
+  mix-blend-mode: screen;
+  background-color: black;
+  background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.5) 50%),
+    linear-gradient(to top, rgba(5, 15, 5, 1), rgba(0, 0, 0, 0) 110%);
+  background-size: 15px 15px, 100%;
+  animation: scan 2.5s linear infinite, blink 0.6s infinite;
+}
+
+.dashboard-box h1 {
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  background-color: rgba(161, 0, 0, 0.747);
+  border: 3px solid rgb(161, 0, 0, 0.747);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.7;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  23% {
+    opacity: 0.3;
+  }
+  27% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  61% {
+    opacity: 0.8;
+  }
+  62% {
+    opacity: 0.6;
+  }
+  67% {
+    opacity: 0.7;
+  }
+  69% {
+    opacity: 0.4;
+  }
+  77% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+@keyframes scan {
+  0% {
+    transform: translate3d(0, -100px, 0);
+  }
+  100% {
+    transform: translate3d(0, 600px, 0);
+  }
+}
+
+.dashboard-main-box {
+  width: 100vw;
+  @media screen and (max-width: 1440px) {
+    .navbar {
+      display: none !important;
+    }
+
+    .top-box {
+      display: none !important;
+    }
+
+    .fixed-header {
+      display: block !important;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .navbar {
+      display: flex !important;
+    }
+
+    .fixed-header {
+      display: none !important;
+    }
+  }
+
+  .top-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.dashboard-content {
+  @media screen and (max-width: 1440px) {
+    .navbar {
+      display: none !important;
+    }
+
+    .top-box {
+      display: none !important;
+    }
+
+    .fixed-header {
+      display: block !important;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .navbar {
+      display: flex !important;
+    }
+
+    .fixed-header {
+      display: none !important;
+    }
+  }
+
+  .top-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top:0;
+  }
+}
+
+.dash-upper-box{
+  @media screen and (min-width: 1440px){
+    height: 100%;
+  }
+}

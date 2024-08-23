@@ -1,0 +1,265 @@
+/* --- --- --- Imports fonts being used --- --- ---*/
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("./assets/fonts/minecraft-font/MinecraftBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "termin-font";
+  src: url("./assets/fonts/termin-font/termin-font.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Minecraft-Reg";
+  src: url("./assets/fonts/minecraft-font/MinecraftRegular.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "sharetechmono";
+  src: url("./assets/fonts/ShareTechMono-Regular.ttf");
+  /* font-weight: 400; */
+}
+
+/* --- --- --- Builds Nav Bar syling --- --- ---*/
+
+.navbar {
+  /* width: 240px; Width of the sidebar */
+  /* height: 80%; */
+  position: fixed;
+  top: 105px;
+  left: 0;
+  /* background-color: rgba(0, 0, 0, 0.89); */
+  color: white;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  padding: 0px 0;
+  z-index: 5;
+}
+
+/* --- --- --- adjusts nav bar's logo styling --- --- ---*/
+
+.logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+}
+
+.logo-container {
+}
+
+.site-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid red; /* Add red line here */
+  padding-bottom: 10px; /* Add padding to separate the line from the content below */
+}
+
+/* --- --- --- Adjusts the Nav Bar element's alignment and stlying --- --- ---*/
+
+.nav-links {
+  list-style-type: none;
+  margin: 25px 0;
+  padding: 0;
+  width: 70%;
+  text-align: center;
+  /* background: rgba(0, 0, 0, 0.9); */
+  /* margin-left: 50px; */
+}
+
+.nav-item {
+  margin-bottom:12px;
+  margin-top: 12px;
+  text-align: left;
+  font-family: "Minecraft-Reg";
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  aspect-ratio: 2.1/0.23;
+}
+.nav-item-2 {
+  margin-bottom: 30px;
+  margin-top: 200px;
+}
+
+/* --- --- --- Creates a green circle before RPC Triton on Nav bar --- --- ---*/
+
+.green-circle::after {
+  content: "";
+  display: inline-block;
+  width: 8px; /* Adjust size as needed */
+  height: 8px; /* Adjust size as needed */
+  background-color: green;
+  border-radius: 50%; /* To make it a circle */
+  margin-left: 8px; /* Adjust spacing between circle and text */
+  animation: glowing 1.5s infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 6px 3px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    background-color: rgb(7, 223, 7);
+    box-shadow: 0 0 7px 3px rgba(0, 255, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 6px 3px rgba(0, 255, 0, 0.5);
+  }
+}
+/* --- --- --- Adds Nav bar text item hover fade effect --- --- ---*/
+.nav-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  /* margin-left: 70px; */
+  display: flex;
+  justify-content: start;
+  align-items:center;
+  font-family: "Technology-Bold";
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    /* margin-left: 70px; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-family: "Technology-Bold";
+    font-size: 27px;
+  }
+}
+
+.nav-link:hover {
+  color: grey;
+}
+
+/* --- --- --- Styling for nav bars bottom social icon items --- --- ---*/
+
+.social-icons {
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Optional: Add space between items */
+  /* Keeps this style from your previous CSS */
+      margin-left: 40px;
+}
+
+.social-icons img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin: 0px;
+}
+
+
+
+
+.connect-overlay-box {
+  transform: translate(0%, 0%);
+  background: linear-gradient(135deg, black, red);
+  /* padding: 10px; */
+  border-radius: 80px;
+  z-index: 1;
+  overflow: hidden;
+  border: solid 2px red;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+  padding: 0;
+}
+
+.header-connect-button .lava{
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #880808; /* Lava color */
+  box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: 0.6s;
+
+}
+
+.connect-overlay-box:hover .lava {
+  top: -223px;
+}
+
+.connect-overlay-box .lava::after,
+.connect-overlay-box .lava::before {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  transform: translate(0%, 0%);
+}
+
+.connect-overlay-box .lava::after {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  box-shadow: 0 0 10px 5px #880808, inset 0 0 5px #880808;
+  animation: animate 5s linear infinite;
+  opacity: 0.8;
+}
+
+.connect-overlay-box .lava::before {
+  border-radius: 40%;
+  box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+    inset 0 0 5px rgba(26, 26, 26, 0.5);
+  background: black;
+
+  animation: animate 7s linear infinite;
+}
+.connect-overlay-box-border {
+  border-radius: 10px;
+  z-index: 777;
+}
+
+.overlay-box .lava {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #880808; /* Lava color */
+  box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: 0.6s;
+}
+
+.overlay-box:hover .lava {
+  top: -120px;
+}
+
+.overlay-box .lava::after,
+.overlay-box .lava::before {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -75%);
+}
+
+.overlay-box .lava::after {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  box-shadow: 0 0 10px 5px #880808, inset 0 0 5px #880808;
+  animation: animate 5s linear infinite;
+  opacity: 0.8;
+}
+
+.overlay-box .lava::before {
+  border-radius: 40%;
+  box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+    inset 0 0 5px rgba(26, 26, 26, 0.5);
+  background: black;
+
+  animation: animate 7s linear infinite;
+}

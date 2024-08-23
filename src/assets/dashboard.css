@@ -1,0 +1,352 @@
+/* --- --- --- Imports fonts being used --- --- ---*/
+
+@font-face {
+  font-family: Minecraft;
+  src: url(./MinecraftBold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: termin-font;
+  src: url(./terminator.ttf);
+  font-weight: 700;
+}
+
+/* Dashboard.css */
+
+.dashboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* --- --- --- Controls top horizontal Nav bar text --- --- ---*/
+.dashboard-header {
+  font-family: 'Termin-font';
+  font-size: 40px;
+}
+/* --- --- --- Controls background video styling --- --- ---*/
+.dashboard-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dashboard-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* --- --- --- Controls text in box 1 --- --- ---*/
+
+.flex-1 {
+  font-family: 'termin-font';
+}
+
+.text-orange {
+  font-family: 'Minecraft-Reg';
+  font-size: large;
+}
+
+/* --- --- --- creates transparent text used for styling transitions --- --- ---*/
+
+.transparent-text {
+  color: rgba(255, 255, 255, 0.0);
+}
+
+/* --- --- --- Controls bottom dashboard box --- --- ---*/
+
+.dashboard-box {
+  /*background: linear-gradient(to bottom, rgb(146, 11, 7), rgb(0, 0, 0)); */
+  background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0));
+  transform: none;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border: 2px solid black; /* Example border */
+  opacity: 0.75;
+  margin-bottom: 25px;
+  position: relative;
+  box-shadow: 0 0 6px 3px rgba(252, 1, 1, 0.5); /* Glow effect */
+}
+
+/* --- --- --- Controls top dashboard box --- --- ---*/
+
+.new-dashboard-box {
+  /*background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0)); */
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 10px;
+  padding: 20px;
+ /* width: 100vw;
+  height: 5vw; */
+  width: 25vw;
+  margin-bottom: 800px; /* Adjust margin as needed */
+  margin-top: -25px;
+  border: 2px solid transparent; /* Example border */
+  min-width: 100vw;
+  opacity: 0.75;
+    position: fixed;
+}
+
+/* --- --- --- Controls top dashboard box texts --- --- ---*/
+
+.newbox-text {
+  /*padding-left: 45vw;*/
+  font-family: 'Termin-font';
+  font-size: 20px;
+  text-align: center;
+  z-index: 15;
+}
+
+.newbox-text-p {
+  /*padding-left: 25vw;*/
+  font-family: 'termin-font';
+  font-size: 20px;
+}
+
+.wallet-box {
+  /*background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0)); */
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 10px;
+  padding: 20px;
+ /* width: 100vw;
+  height: 5vw; */
+  width: 30vw;
+  margin-bottom: 800px; /* Adjust margin as needed */
+  margin-top: -25px;
+  margin-left: 90vw;
+  border: 2px solid transparent, 0, 0; /* Example border */
+
+
+  opacity: 0.75;
+    position: fixed;
+display: flex;
+align-items: right;
+}
+
+.wallet-text {
+  margin-right: 5vw;
+
+}
+
+.wallet-icon {
+  /*background: radial-gradient(circle, rgb(78, 2, 2), rgb(0, 0, 0)); */
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 10px;
+  padding: 20px;
+ /* width: 100vw;
+  height: 5vw; */
+  width: 25vw;
+  margin-bottom: 800px; /* Adjust margin as needed */
+  margin-top: -25px;
+  margin-left: 79vw;
+  border: 2px solid transparent; /* Example border */
+  max-width: 8vw;
+  max-height: 3vw;
+  opacity: 0.75;
+    position: fixed;
+display: flex;
+align-items: center;
+}
+
+.green-bar {
+  background-color: white;
+  height: 60px; /* Adjust the height as needed */
+  width: 100%; /* Full width of the page */
+  display: flex; /* Flexbox for positioning elements */
+  justify-content: space-between; /* Space items evenly along the main axis */
+  align-items: center; /* Center items vertically */
+  padding: 0 20px; /* Padding inside the navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for depth */
+  z-index: 100;
+}
+
+.coin-grid {
+  display: flex; /* Use flexbox to create a row layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+
+}
+
+/* --- --- --- Controls bottom dashboard box texts and stlying --- --- ---*/
+
+.g-col-4-header {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 20px;
+  color: rgb(156 163 175);
+  font-family: 'termin-font';
+}
+
+.g-col-4 {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  color: white;
+  font-family: 'Minecraft-Reg';
+}
+.g-col-4-header {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 20px;
+  color: rgb(156 163 175);
+  font-family: 'Minecraft';
+}
+
+.g-col-4 {
+  width: 25%; /* Each item takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+  color: white;
+  font-family: 'Minecraft-Reg';
+}
+
+/* Crypto swap css */
+
+.tb-switch-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 50%; /* Round border for circular shape */
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: transparent; /* Transparent background */
+  margin-left: 50%;
+
+}
+
+.tb-switch-vertical svg {
+  fill: #ffffff; /* Change image color to white */
+  width: 70%; /* Adjust icon size */
+  height: auto;
+  
+}
+
+.wallet-header-text {
+  text-align: center;; /* Adjust width as needed */
+  align-items: center;
+  font-size: medium;
+  font-family: 'termin-font';
+}
+
+.crypto-wallet-section-text {
+  font-family: 'termin-font';
+  align-items: center;
+  font-size: small;
+  text-align: center;
+}
+
+.crypto-wallet-box {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.dashboard-section {
+  background-color: #5a0b04;;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px; /* Adjust spacing between sections */
+  margin-top: 10px; /* Adjust spacing between sections */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-section {
+  text-align: center; /* Center the button horizontally */
+}
+
+.connect-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5a0b04;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  width: 80%;
+  font-family: 'termin-font';
+}
+
+.connect-button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+ 
+/* --- --- --- Backup Transparent text when first bugs - used as alt className --- --- ---*/
+.transparent1 { 
+  color: transparent;
+}
+
+/* Nates Snap */
+/* html {
+  scroll-snap-type: y mandatory;
+} */
+  
+
+
+  body {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  .main-content {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .faq-scroll-soft {
+    scroll-snap-type: y proximity !important ;
+  }
+  
+  section {
+    /* border-bottom: 1px solid white; */
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  body::after {
+
+
+
+  }
+  
+  footer {
+    position: relative; /* Ensure footer is positioned correctly */
+    background-color: #f1f1f1; /* Adjust based on your design */
+  }
+  
+  .header-section {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff; /* Adjust as needed */
+  }

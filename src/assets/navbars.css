@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: black;
+  font-family: "termin-font";
+  border: 2px #880808;
+}
+
+.navbar-main {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  /* position: relative; /* Ensure positioning for liquid effect */
+  background: transparent;
+}
+
+.navbar-main .liquid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px; /* Updated height */
+  background: #0e0000; /* Dark red background */
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: -1; /* Behind the navigation items */
+  overflow: hidden;
+}
+
+.navbar-main .liquid::before,
+.navbar-main .liquid::after {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  transform: translate(-25%, -75%);
+}
+
+
+.fixed-header .liquid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68px; /* Updated height */
+    background: #0e0000; /* Dark red background */
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: -1; /* Behind the navigation items */
+    overflow: hidden;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255,0,128, 0.192), rgba(255,0,128), rgba(255,0,128, 0.192));
+    border-image-slice: 1;
+  }
+  
+  .fixed-header .liquid::before,
+  .fixed-header .liquid::after {
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -75%);
+  }
+
+.logo{
+    width: 64px ;
+    height: auto;
+}
+
+.navbar-main .liquid::after {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  box-shadow: 0 0 10px 5px #ff2c2c, inset 0 0 5px #ff0000;
+  animation: animate 50s linear infinite; /* Slowed down animation */
+  opacity: 0.8;
+}
+
+.navbar-main .liquid::before {
+  border-radius: 40%;
+  box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+    inset 0 0 5px rgba(26, 26, 26, 0.5);
+  background: rgba(26, 26, 26, 0.5);
+  animation: animate 12s linear infinite; /* Slowed down animation */
+}
+
+.fixed-header .liquid::after {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  box-shadow: 0 0 10px 5px #ff2c2c, inset 0 0 5px #ff0000;
+  animation: animate 50s linear infinite; /* Slowed down animation */
+  opacity: 0.8;
+}
+
+.fixed-header .liquid::before {
+  border-radius: 40%;
+  box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+    inset 0 0 5px rgba(26, 26, 26, 0.5);
+  background: rgba(26, 26, 26, 0.5);
+  animation: animate 12s linear infinite; /* Slowed down animation */
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-25%, -75%) rotate(0);
+  }
+  100% {
+    transform: translate(-25%, -75%) rotate(360deg);
+  }
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+.navbar-main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgb(255, 0, 0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation: waterEffect 10s linear infinite;
+  z-index: -1;
+  mix-blend-mode: multiply;
+}
+
+.navbar-main ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Ensure items are above the liquid effect */
+  align-items: center;
+  font-size: medium;
+}
+
+.navbar-main ul li {
+  margin: 0 30px;
+}
+
+.navbar-main ul li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-main ul li a::before,
+.navbar-main ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background: #ff3333;
+  transition: width 0.3s;
+  box-shadow: 10px 10px 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5),
+    0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.navbar-main ul li a::before {
+  left: 0;
+  bottom: -10px; /* Adjust the value to add a bigger gap */
+}
+
+.navbar-main ul li a::after {
+  right: 0;
+  top: -10px; /* Adjust the value to add a bigger gap */
+}
+
+.navbar-main ul li a:hover {
+  color: #ff3333;
+  transform: scale(1.1);
+}
+
+.navbar-main ul li a:hover::before,
+.navbar-main ul li a:hover::after {
+  width: 100%;
+}
+
+.music-controls {
+  position: absolute;
+  margin-left: 7.5vw;
+  margin-top: 0.5vw;
+}
+
+.music-controls button {
+  background: none;
+  border: none;
+}
+.music-controls img {
+  width: 70px;
+  height: 60px;
+}
+
+/* .logo {
+    position: absolute;
+    overflow: auto;
+    margin-top: 0vh; 
+    margin-left: -99vw; 
+    width: 70px;
+} */
+
+.right-items {
+  display: flex;
+  align-items: center;
+  gap: 0.1vw; /* Adjust this value to change spacing between items */
+}
+
+.connect-wallet-button img {
+    width: 90%;
+    height: 12%;
+    align-items: center;
+    cursor: pointer;
+}
